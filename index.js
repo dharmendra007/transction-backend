@@ -8,6 +8,13 @@ app.use(cors());
 
 const fs = require('fs');
 
+// Test
+app.get('/', async(req, res) => {
+    res.status(201).send({
+        "Msg": "Working"
+    });
+});
+
 // Add Transaction
 app.post('/addTransaction', async(req, res) => {
     let transactionData = fs.readFileSync('transaction.json');
