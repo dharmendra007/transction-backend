@@ -99,6 +99,7 @@ app.delete('/deleteTransaction/:tid', async(req, res) => {
 });
 
 const host = '0.0.0.0';
-app.listen(4000, host, () => {
+const port = process.env.PORT || 4000;
+app.listen(port, host, () => {
     console.log("Listening post 4000");
 })
