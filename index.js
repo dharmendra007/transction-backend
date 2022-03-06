@@ -98,6 +98,7 @@ app.delete('/deleteTransaction/:tid', async(req, res) => {
     }
 });
 
-app.listen(4000, () => {
+const host = '0.0.0.0';
+app.listen(4000, host, () => {
     console.log("Listening post 4000");
 })
