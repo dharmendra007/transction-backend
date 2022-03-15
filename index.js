@@ -38,7 +38,7 @@ app.get('/getTransaction', async(req, res) => {
     let transactionData = fs.readFileSync('transaction.json');
     let transactionJsonData = JSON.parse(transactionData);
 
-    res.status(201).send({ "transData": transactionJsonData.data });
+    res.status(201).send(transactionJsonData.data);
 });
 
 // Get Single Transaction
